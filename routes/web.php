@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/rifa/{name}', 'RifaController@get')->name('rifa.index');
+
+Route::post('/rifa/post', 'RifaController@post')->name('rifa.post');

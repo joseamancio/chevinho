@@ -6276,7 +6276,7 @@ a.close.disabled {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 4rem 1rem;
+  padding: 1rem;
   border-top: 0 solid #dee2e6;
   border-bottom-right-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
