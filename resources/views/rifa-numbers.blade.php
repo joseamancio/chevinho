@@ -27,8 +27,13 @@
     @include('partials.nav')
     <div class="container">
         <section class="page-section clearfix">
+            {{dd($rifa->numbers->disponiveis())}}
             <br>
             <h2>Rifa do {{$rifa->name}}</h2>
+            <br>
+            <p><b>Valor unitário:</b> $30,00</p>
+            <br>
+            <p><b>Sobre o veículo:</b> {{$rifa->description}}</p>
             <br>
             <h5>Números Disponíveis :</h5>
 
@@ -46,7 +51,7 @@
         </section>
         <section class="rifa-number">
             @foreach($rifa->numbers as $num)
-                <div class="number @if($num->status == 1) reserved @elseif($num->status == 2) done @else @endif" id="{{$num->id}}" data_number="{{$num->number}}">
+                <div class="number @if($num->status == 1) reserved @elseif($num->status == 2) done @else number-disponivel @endif" id="{{$num->id}}" data_number="{{$num->number}}" style="display: inline-table;">
                     {{$num->number}}
                 </div>
             @endforeach
@@ -73,9 +78,11 @@
                         <hr>
                         <input type="hidden" value="{{csrf_token()}}" name="_token">
                         <input type="hidden" value="[]" name="numbers" id="numbers">
-                        <input type="text" name="name" placeholder="Nome" class="form-control">
+                        <input type="text" name="name" placeholder="Nome *" class="form-control" required="required">
                         <br>
-                        <input type="test" name="telefone" id="telefone" placeholder="Telefone (WhatsApp)" class="form-control">
+                        <input type="email" name="email" placeholder="E-mail *" class="form-control" required="required">
+                        <br>
+                        <input type="test" name="telefone" id="telefone" placeholder="Telefone (WhatsApp) *" class="form-control" required="required">
                         <br>
                         <input type="checkbox" id="age-checked">
                         <label for="age-checked">Sou maior de <u>18 anos</u></label>

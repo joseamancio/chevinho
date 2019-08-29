@@ -13,6 +13,9 @@ class RifaController extends BaseController
     public function get($name)
     {
     	$rifa = RifaModel::where('name', $name)->first();
+
+    	$rifa->total = count($rifa);
+    	$rifa->disponiveis = count($rifa->numbers->where('status', 0));
     	
     	return view('rifa-numbers', ['rifa' => $rifa]);
     }

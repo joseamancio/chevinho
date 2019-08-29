@@ -49,17 +49,21 @@
                 <!-- Portfolio Item 1 -->
                 <div class="col-md-6 col-lg-4 text-center box-border">
                     <i class="fas fa-coins fa-4x"></i>
-                    <h5>Sorteio realizado pela loteria federal</h5>
+                    <h5>Serão utilizados os <u>3 últimos</u> digitos do sorteio da Loteria Federal</h5>
                 </div>
                 <!-- Portfolio Item 2 -->
                 <div class="col-md-6 col-lg-4 text-center box-border">
                     <i class="fas fa-ticket-alt fa-4x"></i>
-                    <h5>O usuário deverá reservar um número atrás do nosso sistema</h5>
+                    <h5>A escolha dos números será realizada na opção "
+                        <a href="{{route('rifa.index', ['name' => 'chevinho'])}}">
+                            números
+                        </a>"
+                    </h5>
                 </div>
                 <!-- Portfolio Item 3 -->
                 <div class="col-md-6 col-lg-4 text-center box-border">
                     <i class="fas fa-money-bill-wave fa-4x"></i>
-                    <h5>O pagamento é realizado por meio de transferência</h5>
+                    <h5>O pagamento é realizado por meio de transferência eletrônica ou depósito bancário</h5>
                 </div>
             </div>
             <!-- /.row -->

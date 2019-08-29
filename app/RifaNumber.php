@@ -23,4 +23,9 @@ class RifaNumber extends Model
     		return $value;
     	}
     }
+
+    public function disponiveis()
+    {
+        return $this;
+    }
 }
