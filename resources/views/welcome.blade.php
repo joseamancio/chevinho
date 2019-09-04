@@ -37,8 +37,47 @@
             </div>
         </div>
     </header>
-
-    <!-- Portfolio Section -->
+    <section class="page-section-veiculo page-section veiculos" id="veiculos">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary">Sorteios</h2>
+            <br>
+            <div class="col-md-12 text-center">
+                <div class="row">
+                    <div class="col-md-4" style="margin: 0 auto">
+                        <div class="card">
+                            <img class="card-img-top" src="{{asset('img/foto3.jpeg')}}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Chevette Hatch 1980/1980</h5>
+                                <hr>
+                                <p>Valor Unitário: R$30,00</p>
+                                <hr>
+                                <div class="row">
+                                <div class="rifa-info col-md-4">
+                                    <small>Total</small>
+                                    <br>
+                                    <h3>{{$rifa->total}}</h3>
+                                </div>
+                                <div class="rifa-info col-md-4">
+                                    <small>Reservados</small>
+                                    <br>
+                                    <h3>{{$rifa->reservadas}}</h3>
+                                </div>
+                                <div class="rifa-info col-md-4">
+                                    <small>Disponíveis</small>
+                                    <br>
+                                    <h3>{{$rifa->faltando}}</h3>
+                                </div>
+                            </div>
+                                <hr>
+                                <a class="btn btn-danger btn-lg btn-block btn-lobby" href="{{route('rifa.index', ['name' => 'chevinho'])}}">Conferir Números</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section -->  
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading -->

@@ -65,3 +65,11 @@ cursor: pointer; margin: 0 5px}
 .number-filters { margin-bottom: 30px; text-align: right; }
 
 .disable { display: none }
+
+.btn-lobby { color: #fff !important }
+
+.page-section-veiculo { padding: 3rem 0 !important }
+
+.rifa-info { border-right: 1px solid #ddd }
+
+.rifa-info:last-child { border: none }

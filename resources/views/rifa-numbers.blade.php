@@ -29,27 +29,31 @@
         <section class="page-section clearfix">
             <br>
             <h2>Rifa do {{$rifa->name}}</h2>
-            <br>
             <p><b>Valor unitário:</b> $30,00</p>
-            <br>
             <p><b>Sobre o veículo:</b> {{$rifa->description}}</p>
             <br>
-            <h5>Total de números : {{$rifa->total}}</h5>
-            <br>
-            <h5>Números Disponíveis : {{$rifa->disponiveis}}</h5>
+            <p><b>Total de números :</b> {{$rifa->total}}</p>
+            <p><b>Números Disponíveis : </b>{{$rifa->disponiveis}}</p>
+            <p><b>Números Pagos : </b>{{$rifa->pagos}}</p>
 
         </section>
-        <section class="number-filters">
-            <button class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-            <div class="filter-active filter" id="filter-disponivel">
-                Disponíveis
-            </div>  
-            <div class="filter-reserved filter" id="filter-reserved">
-                Reservados
-            </div>  
-            <div class="filter-done filter" id="filter-done">
-                Pagos
-            </div>            
+        <section>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-danger btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">Ver Fotos</button>
+                </div>
+                <div class="col-md-6 number-filters">
+                    <div class="filter-active filter" id="filter-disponivel">
+                        Disponíveis
+                    </div>  
+                    <div class="filter-reserved filter" id="filter-reserved">
+                        Reservados
+                    </div>  
+                    <div class="filter-done filter" id="filter-done">
+                        Pagos
+                    </div>  
+                </div>
+            </div>
         </section>
         <section class="rifa-number">
             @foreach($rifa->numbers as $num)
@@ -99,38 +103,32 @@
     </div>
 
     <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-dialog-centered ">
             <div class="modal-content">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img class="img-responsive" src="{{asset('img/foto3.jpeg')}}">
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive" src="{{asset('img/foto7.jpeg')}}" >
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive" src="{{asset('img/foto6.jpeg')}}">
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive" src="{{asset('img/foto5.jpeg')}}">
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive" src="{{asset('img/foto2.jpeg')}}">
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive" src="{{asset('img/foto1.jpeg')}}">
+                    <div class="row">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner col-md-12">
+                            <div class="item active">
+                                <img class="img-responsive" src="{{asset('img/foto3.jpeg')}}">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive" src="{{asset('img/foto5.jpeg')}}">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive" src="{{asset('img/foto2.jpeg')}}">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive" src="{{asset('img/foto1.jpeg')}}">
+                            </div>
                         </div>
                     </div>
-
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="fas fa-arrow-left fa-2x"></span>
                     </a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <i class="fas fa-arrow-right fa-2x"></i>
                     </a>
                 </div>
             </div>

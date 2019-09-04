@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('index');
+Route::get('/', 'RifaController@index')->name('index');
 
 Route::get('/rifa/{name}', 'RifaController@get')->name('rifa.index');
 
