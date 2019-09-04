@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Chevinho</title>
+    <title>Carros Colecionáves - Chevette</title>
 
     <!-- Custom fonts for this theme -->
     <link href="{{asset('css/all.css')}}" rel="stylesheet" type="text/css">
@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-6 div-align-center">
-                        <h1>Junte-se a nós e resgate o prazer de ter uma relíquia</h1>
+                        <h1>Não perca a chance de ter um Chevette placa preta!<h1>
                     </div>
                 </div>
             </div>

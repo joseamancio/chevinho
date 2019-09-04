@@ -49,11 +49,15 @@ margin: 5px 5px;}
 
 .filter-reserved { color: #1f1f06; background-color: #F9F16D; border: 1px solid #F9F16D; }
 
-.filter-active { color: #fff; background-color: #44af18; border: 1px solid #44af18; }
+.filter-active { color: black; background-color: transparent; border: 1px solid #44af18; }
 
 .filter-done { background-color: #bbb; color: black; text-align: center !important }
 
 .danger span { color: #fff }
+
+.filter { border-radius: 5px; display: inline-table; padding: 10px; width: 100px; height: 40px; text-align: center;
+cursor: pointer; margin: 0 5px}
+
 
 .filter { border-radius: 5px; display: inline-table; padding: 10px; width: 100px; height: 40px; text-align: center;
 cursor: pointer; margin: 0 5px}

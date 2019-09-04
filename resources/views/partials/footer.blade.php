@@ -1,7 +1,7 @@
 <!-- Footer -->
     <footer class="copyright py-4 text-center text-white">
         <div class="container">
-            <small>Copyright &copy; chevinho 2019</small>
+            <small>Copyright &copy; Carros Colecionáveis 2019</small>
         </div>
     </footer>            
 

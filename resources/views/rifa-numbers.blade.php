@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Chevinho</title>
+    <title>Carros Colecionáves - Chevette</title>
 
     <!-- Custom fonts for this theme -->
     <link href="{{asset('css/all.css')}}" rel="stylesheet" type="text/css">
@@ -27,7 +27,6 @@
     @include('partials.nav')
     <div class="container">
         <section class="page-section clearfix">
-            {{dd($rifa->numbers->disponiveis())}}
             <br>
             <h2>Rifa do {{$rifa->name}}</h2>
             <br>
@@ -35,10 +34,13 @@
             <br>
             <p><b>Sobre o veículo:</b> {{$rifa->description}}</p>
             <br>
-            <h5>Números Disponíveis :</h5>
+            <h5>Total de números : {{$rifa->total}}</h5>
+            <br>
+            <h5>Números Disponíveis : {{$rifa->disponiveis}}</h5>
 
         </section>
         <section class="number-filters">
+            <button class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
             <div class="filter-active filter" id="filter-disponivel">
                 Disponíveis
             </div>  
@@ -51,14 +53,14 @@
         </section>
         <section class="rifa-number">
             @foreach($rifa->numbers as $num)
-                <div class="number @if($num->status == 1) reserved @elseif($num->status == 2) done @else number-disponivel @endif" id="{{$num->id}}" data_number="{{$num->number}}" style="display: inline-table;">
-                    {{$num->number}}
-                </div>
+            <div class="number @if($num->status == 1) reserved @elseif($num->status == 2) done @else number-disponivel @endif" id="{{$num->id}}" data_number="{{$num->number}}" style="display: inline-table;">
+                {{$num->number}}
+            </div>
             @endforeach
             <button type="button" class="btn btn-success btn-block" id="showModal">Escolher números</button>
             <br>
         </section>
-    </div>
+    
 
     <!-- Modal -->
     <div class="modal fade" id="concluir-cadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -96,6 +98,45 @@
         </div>
     </div>
 
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="img-responsive" src="{{asset('img/foto3.jpeg')}}">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="{{asset('img/foto7.jpeg')}}" >
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="{{asset('img/foto6.jpeg')}}">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="{{asset('img/foto5.jpeg')}}">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="{{asset('img/foto2.jpeg')}}">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="{{asset('img/foto1.jpeg')}}">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="alert-number" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -108,7 +149,10 @@
             </div>
         </div>
     </div>
-    @include('partials.footer')
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="{{asset('js/chevinho.js')}}"></script>
 </body>
 
 </html>
