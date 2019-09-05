@@ -41,7 +41,7 @@
                 <div class="col-md-5 col-sm-12">
                     <button class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg">Ver Fotos</button>
 
-                    <button class="btn btn-success " data-toggle="modal" data-target=".bs-example-modal-lg">Regulamento</button>
+                    <a class="btn btn-success btn-link" href="{{route('regulamento')}}" target="_blank">Regulamento</a>
                 </div>
                 <div class="col-md-7 col-sm-12 number-filters">
                     <div class="filter-active filter" id="filter-disponivel">

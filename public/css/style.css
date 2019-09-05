@@ -78,6 +78,8 @@ cursor: pointer; margin: 0 5px}
 
 .page-section-numbers { margin: 5rem 0; }
 
+.btn-link { cursor: pointer; color: #fff !important }
+
 @media(min-width: 768px) and (max-width: 991px) {
 	.box-border { margin-top: 15px }
 }
@@ -102,4 +104,8 @@ cursor: pointer; margin: 0 5px}
 
 @media(max-width: 531px) {
 	.number { margin: 5px 1px; }
+}
+
+.page-section-regulamento {
+    padding: 8rem 0;
 }

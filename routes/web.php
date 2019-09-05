@@ -16,3 +16,5 @@ Route::get('/', 'RifaController@index')->name('index');
 Route::get('/rifa/{name}', 'RifaController@get')->name('rifa.index');
 
 Route::post('/rifa/post', 'RifaController@post')->name('rifa.post');
+
+Route::view('/regulamento', 'regulamento')->name('regulamento');
