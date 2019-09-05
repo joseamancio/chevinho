@@ -6,9 +6,9 @@
     </footer>            
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-to-top d-lg-none position-fixed ">
-        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
+    <div class="wpp position-fixed ">
+        <a class="text-center text-white rounded" href="https://wa.me/5531998702664">
+            <i class="fab fa-whatsapp fa-2x"></i>
         </a>
     </div>
 

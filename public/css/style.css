@@ -109,3 +109,14 @@ cursor: pointer; margin: 0 5px}
 .page-section-regulamento {
     padding: 8rem 0;
 }
+
+.scroll-to-top {
+	background-color: #25d366;
+}
+
+.fa-whatsapp { line-height: 1.2 }
+
+@media(max-width: 991px) {
+	.wpp { position: fixed; z-index: 1500; right: 1rem; bottom: 1rem; 
+		border-radius: 20%; background-color: #25d366; padding: 3px 7px }
+}

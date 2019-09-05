@@ -53,7 +53,7 @@
 					<br>
 					<h4 class="text-center">DA RETIRADA DOS PRÊMIOS </h4>
 					<p>O Sorteado deverá retirar o bem pessoalmente ou por intermédio de procuração devidamente registrada na cidade de Belo Horizonte. Os custos de transferência do bem serão por conta do GANHADOR, bem como o custo de transporte, caso seja necessário. O veículo será entregue com a documentação em dia (sem multas ou autuações). OBSERVAÇÃO: CASO O GANHADOR NÃO VENHA RETIRAR O BEM PESSOALMENTE OU POR PROCURADOR, DEVERÁ ENVIAR PROCURAÇÃO PÚBLICA OUTORGANDO PODERES AO ORGANIZADOR PARA ASSINAR O CRV COMO COMPRADOR, PARA OS DEVIDOS FINS DE COMUNICAÇÃO DE VENDA. VEÍCULO EM REGULAR ESTADO DE FUNCIONAMENTO, ENTREGUE NO ESTADO EM QUE SE ENCONTRA. SEM GARANTIA.</p>
-					<p>As premiações subsequentes da principal, o ordenado será depositado na mesma conta que foi realizado a compra para concorrer. O GANHADOR deve entrar em contato no número (31)998702-664 via whatsapp e confirmar seus dados.</p>
+					<p>As premiações subsequentes da principal, o ordenado será depositado na mesma conta que foi realizado a compra para concorrer. O GANHADOR deve entrar em contato no número (31)99870-2664 via whatsapp e confirmar seus dados.</p>
             	</div>
             </div>
         </div>
