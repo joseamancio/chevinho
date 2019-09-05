@@ -2,19 +2,21 @@
 
 .fas { margin-bottom: 10px }
 
-.box-border { 
-	border-width: 3px;
-	border-style: solid;
-	-webkit-border-image: 
-	-webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
-	-webkit-border-image: 
-	-webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
-	-moz-border-image:
-	-moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;    
-	-o-border-image:
-	-o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
-	border-image:
-	linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%; 
+@media(min-width: 768px) {
+	.box-border { 
+		border-width: 3px;
+		border-style: solid;
+		-webkit-border-image: 
+		-webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+		-webkit-border-image: 
+		-webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+		-moz-border-image:
+		-moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;    
+		-o-border-image:
+		-o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+		border-image:
+		linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%; 
+	}
 }
 
 .navbar:after { 
@@ -70,6 +72,34 @@ cursor: pointer; margin: 0 5px}
 
 .page-section-veiculo { padding: 3rem 0 !important }
 
-.rifa-info { border-right: 1px solid #ddd }
+.rifa-info { border-right: 1px solid #ddd; width: 33% }
 
 .rifa-info:last-child { border: none }
+
+.page-section-numbers { margin: 5rem 0; }
+
+@media(min-width: 768px) and (max-width: 991px) {
+	.box-border { margin-top: 15px }
+}
+
+@media(max-width: 767px) {
+	.box-border { 
+		border-top: 3px solid;
+		border-image-source: linear-gradient(45deg, black, #ddd);
+		border-image-slice: 1;
+		padding-top: 20px;
+	}
+	.box-border:first-child { 
+		border: none;
+	}
+
+	.row-filters * { text-align: center; margin-top: 5px }
+}
+
+@media(min-width: 768px) and (max-width: 990px ){
+	.row-filters * { text-align: left; margin-top: 5px }
+}
+
+@media(max-width: 531px) {
+	.number { margin: 5px 1px; }
+}

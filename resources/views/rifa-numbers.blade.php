@@ -24,25 +24,26 @@
 <body id="page-top">
 
     <!-- Navigation -->
-    @include('partials.nav')
+    @include('partials.nav-numbers')
     <div class="container">
-        <section class="page-section clearfix">
+        <section class="page-section-numbers clearfix">
             <br>
             <h2>Rifa do {{$rifa->name}}</h2>
             <p><b>Valor unitário:</b> $30,00</p>
             <p><b>Sobre o veículo:</b> {{$rifa->description}}</p>
             <br>
-            <p><b>Total de números :</b> {{$rifa->total}}</p>
-            <p><b>Números Disponíveis : </b>{{$rifa->disponiveis}}</p>
+            <p><b>Números Disponíveis : </b>{{$rifa->disponiveis}} / {{$rifa->total}}</p>
             <p><b>Números Pagos : </b>{{$rifa->pagos}}</p>
 
         </section>
         <section>
-            <div class="row">
-                <div class="col-md-6">
-                    <button class="btn btn-danger btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">Ver Fotos</button>
+            <div class="row row-filters">
+                <div class="col-md-5 col-sm-12">
+                    <button class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg">Ver Fotos</button>
+
+                    <button class="btn btn-danger " data-toggle="modal" data-target=".bs-example-modal-lg">Regulamento</button>
                 </div>
-                <div class="col-md-6 number-filters">
+                <div class="col-md-7 col-sm-12 number-filters">
                     <div class="filter-active filter" id="filter-disponivel">
                         Disponíveis
                     </div>  

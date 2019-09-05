@@ -40,8 +40,5 @@ class RifaController extends BaseController
         $user->name = $data->name;
         $user->phone = $data->telefone;
         $user->save();
-
-
-
     }
 }

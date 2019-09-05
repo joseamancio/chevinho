@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-6 div-align-center">
-                        <h1>Não perca a chance de ter um Chevette placa preta!<h1>
+                        <h2>Não perca a chance de ter um Chevette placa preta!<h2>
                     </div>
                 </div>
             </div>
@@ -52,17 +52,17 @@
                                 <p>Valor Unitário: R$30,00</p>
                                 <hr>
                                 <div class="row">
-                                <div class="rifa-info col-md-4">
+                                <div class="rifa-info">
                                     <small>Total</small>
                                     <br>
                                     <h3>{{$rifa->total}}</h3>
                                 </div>
-                                <div class="rifa-info col-md-4">
+                                <div class="rifa-info">
                                     <small>Reservados</small>
                                     <br>
                                     <h3>{{$rifa->reservadas}}</h3>
                                 </div>
-                                <div class="rifa-info col-md-4">
+                                <div class="rifa-info">
                                     <small>Disponíveis</small>
                                     <br>
                                     <h3>{{$rifa->faltando}}</h3>
@@ -78,7 +78,7 @@
         </div>
     </section>
     <!-- Portfolio Section -->  
-    <section class="page-section portfolio" id="portfolio">
+    <section class="page-section portfolio bg-primary " id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading -->
             <h2 class="page-section-heading text-center text-uppercase text-secondary">Como Funciona</h2>
@@ -110,13 +110,10 @@
     </section>
 
     <!-- About Section -->
-    <section class="page-section bg-primary mb-0" id="about">
+    <!-- <section class="page-section mb-0" id="about">
         <div class="container">
-
-            <!-- About Section Heading -->
             <h2 class="page-section-heading text-center text-uppercase text-secondary">Quem Somos</h2>
             <br>
-            <!-- About Section Content -->
             <div class="row">
                 <div class="col-lg-4 ml-auto">
                     <p class="lead">Somos um grupo de amigos apaixonados por carros que nos reunimos com o mesmo interesse: "resgatar" os carros antigos de volta para a nossa convivência!</p>
@@ -126,7 +123,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section class="page-section" id="contact">
