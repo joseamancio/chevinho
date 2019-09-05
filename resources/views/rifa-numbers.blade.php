@@ -39,9 +39,9 @@
         <section>
             <div class="row row-filters">
                 <div class="col-md-5 col-sm-12">
-                    <button class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg">Ver Fotos</button>
+                    <button class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg">Ver Fotos</button>
 
-                    <button class="btn btn-danger " data-toggle="modal" data-target=".bs-example-modal-lg">Regulamento</button>
+                    <button class="btn btn-success " data-toggle="modal" data-target=".bs-example-modal-lg">Regulamento</button>
                 </div>
                 <div class="col-md-7 col-sm-12 number-filters">
                     <div class="filter-active filter" id="filter-disponivel">
