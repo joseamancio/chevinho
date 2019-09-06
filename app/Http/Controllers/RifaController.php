@@ -64,7 +64,7 @@ class RifaController extends BaseController
             $rifa = RifaNumberModel::find($number);
 
             if($rifa->status != 0) {
-                return view('rifa-success', ['message' => 'fail']);;
+                return view('rifa-success', ['message' => 'fail', 'total' => 0]);;
             }
 
             $rifa->user_id = $UserModel->id;
@@ -72,6 +72,8 @@ class RifaController extends BaseController
             $rifa->save();
         }
 
-        return view('rifa-success', ['message' => 'success']);
+        $total = count($data['numbers']) * 30;
+
+        return view('rifa-success', ['message' => 'success', 'total' => $total]);
     }
 }

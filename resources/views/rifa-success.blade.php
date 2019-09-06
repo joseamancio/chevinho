@@ -31,6 +31,7 @@
                 <div class="alert alert-success">
                     <h3 class="text-center">Número reservado com sucesso!</h3>
                     <p class="text-center">Lembre-se que para efetivar a reserva, realize o deposito/transferência em até 48h</p>
+                    <p class="text-center"><b>Valor a ser pago:</b> R${{$total}},00</p>
                     <p class="text-center">NÃO ESQUEÇA DE ENVIAR O COMPROVANTE POR WHATSAPP (31)99870-2664</p>
                 </div>
             @else
