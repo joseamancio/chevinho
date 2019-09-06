@@ -6,6 +6,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
 use App\Rifa as RifaModel;
+use App\User as UserModel;
+use App\RifaNumber as RifaNumberModel;
 
 class RifaController extends BaseController
 {
@@ -34,11 +36,42 @@ class RifaController extends BaseController
 
     public function post(Request $request)
     {
-    	$data = $request->all();
+        $data = $request->all();
 
-    	$user = User::findOrCreate(['email' => $data->email]);
-        $user->name = $data->name;
-        $user->phone = $data->telefone;
-        $user->save();
+        $request->validate([
+            'name' => 'required',
+            'telefone' => 'required',
+            'date_of_birth' => 'accepted',
+        ]);
+
+        $data['numbers'] = explode(',', $data['numbers']);
+
+    	$UserModel = UserModel::where(['email' => $data['email']])->first();
+
+        if(!empty($UserModel)) {
+            $UserModel->name = $data['name'];
+            $UserModel->phone = $data['telefone'];
+            $UserModel->save();
+        } else {
+            $UserModel = UserModel::create([
+                'name'  => $data['name'],
+                'email'  => $data['email'],
+                'phone' => $data['telefone'],
+            ]);
+        }
+
+        foreach($data['numbers'] as $number) {
+            $rifa = RifaNumberModel::find($number);
+
+            if($rifa->status != 0) {
+                return view('rifa-success', ['message' => 'fail']);;
+            }
+
+            $rifa->user_id = $UserModel->id;
+            $rifa->status = RifaNumberModel::RESERVADA;
+            $rifa->save();
+        }
+
+        return view('rifa-success', ['message' => 'success']);
     }
 }

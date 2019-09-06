@@ -19,6 +19,13 @@ $(document).ready(function () {
 			$('#concluir-cadastro').modal('show');
 		}
 	});
+
+	$('#closeModal').on('click', function () {
+		$('#concluir-cadastro').modal('hide');
+		$('.show-number').remove();
+		// var parent = document.getElementById("body-form");
+		// parent.parentNode.removeChild(parent);
+	});
 });
 
 function addElements() {
@@ -28,8 +35,6 @@ function addElements() {
 	for(var i = 0; i < elm.length; i++) {
 		names.push(elm[i].id);
 	}
-
-	names.join();
 
 	document.getElementById('numbers').value = names;
 }

@@ -34,7 +34,15 @@
             <br>
             <p><b>Números Disponíveis : </b>{{$rifa->disponiveis}} / {{$rifa->total}}</p>
             <p><b>Números Pagos : </b>{{$rifa->pagos}}</p>
-
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
         </section>
         <section>
             <div class="row row-filters">
@@ -62,7 +70,8 @@
                 {{$num->number}}
             </div>
             @endforeach
-            <button type="button" class="btn btn-success btn-block" id="showModal">Escolher números</button>
+            <br>
+            <button type="button" class="btn btn-success btn-block btn-select-number" id="showModal">Escolher números</button>
             <br>
         </section>
     
@@ -73,9 +82,6 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Finalizar Reserva</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
                 <form method="post" action="{{route('rifa.post')}}" onsubmit="addElements()" id="form-rifa"> 
                     <div class="modal-body">
@@ -87,15 +93,15 @@
                         <input type="hidden" value="[]" name="numbers" id="numbers">
                         <input type="text" name="name" placeholder="Nome *" class="form-control" required="required">
                         <br>
-                        <input type="email" name="email" placeholder="E-mail *" class="form-control" required="required">
+                        <input type="email" name="email" placeholder="E-mail *" class="form-control" >
                         <br>
                         <input type="test" name="telefone" id="telefone" placeholder="Telefone (WhatsApp) *" class="form-control" required="required">
                         <br>
-                        <input type="checkbox" id="age-checked">
+                        <input type="checkbox" id="age-checked" name="date_of_birth" required="required">
                         <label for="age-checked">Sou maior de <u>18 anos</u></label>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" id="closeModal">Cancelar</button>
                         <input type="submit" class="btn btn-success" value="Finalizar">
                     </div>
                 </form>
@@ -111,16 +117,16 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner col-md-12">
                             <div class="item active">
-                                <img class="img-responsive" src="{{asset('img/foto3.jpeg')}}">
+                                <img class="img-responsive" src="{{asset('img/foto3.jpg')}}">
                             </div>
                             <div class="item">
-                                <img class="img-responsive" src="{{asset('img/foto5.jpeg')}}">
+                                <img class="img-responsive" src="{{asset('img/foto5.jpg')}}">
                             </div>
                             <div class="item">
-                                <img class="img-responsive" src="{{asset('img/foto2.jpeg')}}">
+                                <img class="img-responsive" src="{{asset('img/foto2.jpg')}}">
                             </div>
                             <div class="item">
-                                <img class="img-responsive" src="{{asset('img/foto1.jpeg')}}">
+                                <img class="img-responsive" src="{{asset('img/foto1.jpg')}}">
                             </div>
                         </div>
                     </div>
@@ -149,9 +155,22 @@
         </div>
     </div>
     </div>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <footer class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>Copyright &copy; Carros Colecionáveis 2019</small>
+        </div>
+    </footer>
+
+    <script src="{{asset('js/jquery.js')}}"></script>
+    <script src="{{asset('js/jquery.mask.js')}}"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="{{asset('js/chevinho.js')}}"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#telefone').mask('(00) 0000-00009');
+        });
+    </script>
 </body>
 
 </html>

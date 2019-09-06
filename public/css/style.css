@@ -120,3 +120,13 @@ cursor: pointer; margin: 0 5px}
 	.wpp { position: fixed; z-index: 1500; right: 1rem; bottom: 1rem; 
 		border-radius: 20%; background-color: #25d366; padding: 3px 7px }
 }
+
+.btn-select-number { margin-top: 50px }
+
+.alert { margin-top: 5rem }
+
+.row-dados-bancarios { margin-top: 3rem }
+
+.row-dados-bancarios:last-child { margin-bottom: 3rem }
+
+.bancos { margin: 8rem 0 }

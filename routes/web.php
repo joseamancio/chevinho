@@ -18,3 +18,5 @@ Route::get('/rifa/{name}', 'RifaController@get')->name('rifa.index');
 Route::post('/rifa/post', 'RifaController@post')->name('rifa.post');
 
 Route::view('/regulamento', 'regulamento')->name('regulamento');
+
+Route::view('/dados-bancarios', 'dados-bancarios')->name('dados-bancarios');

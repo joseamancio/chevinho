@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class RifaNumber extends Model
 {
+    const DISPONIVEL = 0;
+    const RESERVADA = 1;
+    const PAGA = 2;
+
     protected $fillable = ['rifa_id', 'user_id', 'number', 'status'];
 
     public function rifa()

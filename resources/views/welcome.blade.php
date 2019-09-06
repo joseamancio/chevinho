@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-md-4" style="margin: 0 auto">
                         <div class="card">
-                            <img class="card-img-top" src="{{asset('img/foto3.jpeg')}}" alt="Card image cap">
+                            <img class="card-img-top" src="{{asset('img/foto3.jpg')}}" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Chevette Hatch 1980/1980</h5>
                                 <hr>
@@ -102,7 +102,7 @@
                 <!-- Portfolio Item 3 -->
                 <div class="col-md-6 col-lg-4 text-center box-border">
                     <i class="fas fa-money-bill-wave fa-4x"></i>
-                    <h5>O pagamento é realizado por meio de transferência eletrônica ou depósito bancário</h5>
+                    <h5>O <a href="{{route('dados-bancarios')}}">pagamento</a> é realizado por meio de transferência eletrônica ou depósito bancário</h5>
                 </div>
             </div>
             <!-- /.row -->
@@ -131,46 +131,13 @@
 
             <!-- Contact Section Heading -->
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contato</h2>
-
+            <br>
             <!-- Contact Section Form -->
             <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                        <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                <label>Nome</label>
-                                <input class="form-control" id="name" type="text" placeholder="Nome" required="required" data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                <label>E-mail</label>
-                                <input class="form-control" id="email" type="email" placeholder="E-mail" required="required" data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                <label>Telefone</label>
-                                <input class="form-control" id="phone" type="tel" placeholder="Telefone" required="required" data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                <label>Mensagem</label>
-                                <textarea class="form-control" id="message" rows="5" placeholder="Mensagem" required="required" data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-success btn-xl" id="sendMessageButton">Enviar</button>
-                        </div>
-                    </form>
+                <div class="col-lg-5 mx-auto">
+                    <h5 class="text-center">Entre em contato conosco através do nosso WhatsApp</h5>
+                    <br>
+                    <h5 class="text-center">(31)99870-2664</h5>
                 </div>
             </div>
 
