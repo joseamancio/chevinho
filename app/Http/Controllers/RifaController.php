@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Rifa as RifaModel;
 use App\User as UserModel;
+use App\Cliente as ClienteModel;
 use App\RifaNumber as RifaNumberModel;
 
 class RifaController extends BaseController
@@ -46,19 +47,11 @@ class RifaController extends BaseController
 
         $data['numbers'] = explode(',', $data['numbers']);
 
-    	$UserModel = UserModel::where(['email' => $data['email']])->first();
-
-        if(!empty($UserModel)) {
-            $UserModel->name = $data['name'];
-            $UserModel->phone = $data['telefone'];
-            $UserModel->save();
-        } else {
-            $UserModel = UserModel::create([
-                'name'  => $data['name'],
-                'email'  => $data['email'],
-                'phone' => $data['telefone'],
-            ]);
-        }
+        $ClienteModel = ClienteModel::create([
+            'name'  => $data['name'],
+            'email'  => $data['email'],
+            'phone' => $data['telefone'],
+        ]);
 
         foreach($data['numbers'] as $number) {
             $rifa = RifaNumberModel::find($number);
@@ -67,7 +60,7 @@ class RifaController extends BaseController
                 return view('rifa-success', ['message' => 'fail', 'total' => 0]);;
             }
 
-            $rifa->user_id = $UserModel->id;
+            $rifa->cliente_id = $ClienteModel->id;
             $rifa->status = RifaNumberModel::RESERVADA;
             $rifa->save();
         }

@@ -10,7 +10,7 @@ class RifaNumber extends Model
     const RESERVADA = 1;
     const PAGA = 2;
 
-    protected $fillable = ['rifa_id', 'user_id', 'number', 'status'];
+    protected $fillable = ['rifa_id', 'user_id', 'number', 'status', 'cliente_id'];
 
     public function rifa()
     {
