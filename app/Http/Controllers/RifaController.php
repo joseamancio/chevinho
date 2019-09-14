@@ -19,7 +19,8 @@ class RifaController extends BaseController
 
         $rifa->total = count($rifa->numbers);
         $rifa->reservadas = count($rifa->numbers->where('status', 1));
-        $rifa->faltando = ($rifa->total - $rifa->reservadas);
+        $rifa->pagas = count($rifa->numbers->where('status', 2));
+        $rifa->faltando = ($rifa->total - ($rifa->reservadas + $rifa->pagas));
 
         return view('welcome', ['rifa' => $rifa]);
     }
