@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-md-4" style="margin: 0 auto">
                         <div class="card">
-                            <img class="card-img-top" src="{{asset('img/foto3.jpg')}}" alt="Card image cap">
+                            <img class="card-img-top" src="{{asset('img/chevette-lateral.jpeg')}}" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Chevette Hatch 1980/1980</h5>
                                 <hr>
