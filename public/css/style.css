@@ -1,25 +1,25 @@
-.row-divisor { margin-top: 10px } 
+.row-divisor { margin-top: 10px }
 
 .fas { margin-bottom: 10px }
 
 @media(min-width: 768px) {
-	.box-border { 
+	.box-border {
 		border-width: 3px;
 		border-style: solid;
-		-webkit-border-image: 
+		-webkit-border-image:
 		-webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
-		-webkit-border-image: 
+		-webkit-border-image:
 		-webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
 		-moz-border-image:
-		-moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;    
+		-moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
 		-o-border-image:
 		-o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
 		border-image:
-		linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%; 
+		linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%;
 	}
 }
 
-.navbar:after { 
+.navbar:after {
     content:"";
     background: -webkit-linear-gradient(left, #272424, red);
     display: block;
@@ -37,7 +37,7 @@
 .number { width: 49px; height: 49px; border-radius: 100%; border: 1px solid #5f5c5c; display: inline-table; padding: 10px ;
 margin: 5px 5px; cursor: pointer;}
 
-.show-number { width: 49px; height: 49px; border-radius: 100%;  color: #fff; background-color: #44af18; border: 1px solid #44af18; 
+.show-number { width: 49px; height: 49px; border-radius: 100%;  color: #fff; background-color: #44af18; border: 1px solid #44af18;
  display: inline-table; padding: 10px ;
 margin: 5px 5px;}
 
@@ -85,13 +85,13 @@ cursor: pointer; margin: 0 5px}
 }
 
 @media(max-width: 767px) {
-	.box-border { 
+	.box-border {
 		border-top: 3px solid;
 		border-image-source: linear-gradient(45deg, black, #ddd);
 		border-image-slice: 1;
 		padding-top: 20px;
 	}
-	.box-border:first-child { 
+	.box-border:first-child {
 		border: none;
 	}
 
@@ -117,7 +117,7 @@ cursor: pointer; margin: 0 5px}
 .fa-whatsapp { line-height: 1.2 }
 
 @media(max-width: 991px) {
-	.wpp { position: fixed; z-index: 1500; right: 1rem; bottom: 1rem; 
+	.wpp { position: fixed; z-index: 1500; right: 1rem; bottom: 1rem;
 		border-radius: 20%; background-color: #25d366; padding: 3px 7px }
 }
 
@@ -125,9 +125,9 @@ cursor: pointer; margin: 0 5px}
 
 .alert { margin-top: 5rem }
 
-.row-dados-bancarios { margin-top: 3rem }
+.row-dados-bancarios { margin-top: 2rem }
 
-.row-dados-bancarios:last-child { margin-bottom: 3rem }
+.row-dados-bancarios:last-child { margin-bottom: 3rem; margin-top: 3rem }
 
 .bancos { margin: 8rem 0 }
 
