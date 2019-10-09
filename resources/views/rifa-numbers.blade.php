@@ -75,12 +75,13 @@
         </section>
         <section class="rifa-number">
             @foreach($rifa->numbers as $num)
-            <div class="number @if($num->status == 1) reserved @elseif($num->status == 2) done @else number-disponivel @endif" id="{{$num->id}}" data_number="{{$num->number}}" style="display: inline-table;">
+            <div class="number @if($num->status == 1) reserved @elseif($num->status == 2) done @else number-disponivel @endif" id="{{$num->id}}" data_number="{{$num->number}}" style="display: inline-table;" onclick="gtag('event', 'Selecionar Números', { 'send_to': 'UA-149365568-1', 'event_category': 'clique', 'event_label': 'Selecionar Números' });">
                 {{$num->number}}
             </div>
             @endforeach
             <br>
-            <button type="button" class="btn btn-success btn-block btn-select-number" id="showModal">Escolher números</button>
+            <button type="button" class="btn btn-success btn-block btn-select-number" id="showModal"
+            onclick="gtag('event', 'Escolher Números', { 'send_to': 'UA-149365568-1', 'event_category': 'clique', 'event_label': 'Escolher Números' });">Escolher números</button>
             <br>
         </section>
     
@@ -102,7 +103,7 @@
                         <input type="hidden" value="[]" name="numbers" id="numbers">
                         <input type="text" name="name" placeholder="Nome *" class="form-control" required="required">
                         <br>
-                        <input type="email" name="email" placeholder="E-mail *" class="form-control" >
+                        <input type="email" name="email" placeholder="E-mail" class="form-control" >
                         <br>
                         <input type="test" name="telefone" id="telefone" placeholder="Telefone (WhatsApp) *" class="form-control" required="required">
                         <br>
@@ -110,8 +111,9 @@
                         <label for="age-checked">Sou maior de <u>18 anos</u></label>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" id="closeModal">Cancelar</button>
-                        <input type="submit" class="btn btn-success" value="Finalizar">
+                        <button type="button" class="btn btn-danger" id="closeModal"
+                        onclick="gtag('event', 'Cancelar Reserva', { 'send_to': 'UA-149365568-1', 'event_category': 'clique', 'event_label': 'Cancelar Reserva' });">Cancelar</button>
+                        <input type="submit" class="btn btn-success" value="Finalizar" onclick="gtag('event', 'Finalizar Reserva', { 'send_to': 'UA-149365568-1', 'event_category': 'clique', 'event_label': 'Finalizar Reserva' });">
                     </div>
                 </form>
             </div>
