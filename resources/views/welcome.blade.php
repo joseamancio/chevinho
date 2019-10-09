@@ -78,7 +78,8 @@
                                 </div>
                             </div>
                                 <hr>
-                                <a class="btn btn-danger btn-lg btn-block btn-lobby" href="{{route('rifa.index', ['name' => 'chevinho'])}}">Conferir Números</a>
+                                <a class="btn btn-danger btn-lg btn-block btn-lobby" href="{{route('rifa.index', ['name' => 'chevinho'])}}"
+                                    onclick="gtag('event', 'Conferir Números', { 'send_to': 'UA-149365568-1', 'event_category': 'clique', 'event_label': 'Conferir Números' });">Conferir Números</a>
                             </div>
                         </div>
                     </div>
