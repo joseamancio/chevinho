@@ -75,7 +75,7 @@
         </section>
         <section class="rifa-number">
             <div class="alert alert-danger text-center" role="alert">
-                <h3>Desculpem o transtorno!</h3>
+                <h3>Desculpem-nos o transtorno!</h3>
                 <br>
                 <h5>Estamos em manutenção</h5>
             </div>
