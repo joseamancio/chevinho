@@ -38,6 +38,8 @@ class RifaController extends BaseController
 
     public function post(Request $request)
     {
+        return redirect()->action('RifaController@index');
+
         $data = $request->all();
 
         $request->validate([

@@ -63,28 +63,33 @@
                 <div class="col-md-7 col-sm-12 number-filters">
                     <div class="filter-active filter" id="filter-disponivel">
                         Disponíveis
-                    </div>  
+                    </div>
                     <div class="filter-reserved filter" id="filter-reserved">
                         Reservados
-                    </div>  
+                    </div>
                     <div class="filter-done filter" id="filter-done">
                         Pagos
-                    </div>  
+                    </div>
                 </div>
             </div>
         </section>
         <section class="rifa-number">
-            @foreach($rifa->numbers as $num)
-            <div class="number @if($num->status == 1) reserved @elseif($num->status == 2) done @else number-disponivel @endif" id="{{$num->id}}" data_number="{{$num->number}}" style="display: inline-table;" onclick="gtag('event', 'Selecionar Números', { 'send_to': 'UA-149365568-1', 'event_category': 'clique', 'event_label': 'Selecionar Números' });">
-                {{$num->number}}
+            <div class="alert alert-danger text-center" role="alert">
+                <h3>Desculpem o transtorno!</h3>
+                <br>
+                <h5>Estamos em manutenção</h5>
             </div>
-            @endforeach
-            <br>
-            <button type="button" class="btn btn-success btn-block btn-select-number" id="showModal"
-            onclick="gtag('event', 'Escolher Números', { 'send_to': 'UA-149365568-1', 'event_category': 'clique', 'event_label': 'Escolher Números' });">Escolher números</button>
-            <br>
+{{--            @foreach($rifa->numbers as $num)--}}
+{{--            <div class="number @if($num->status == 1) reserved @elseif($num->status == 2) done @else number-disponivel @endif" id="{{$num->id}}" data_number="{{$num->number}}" style="display: inline-table;" onclick="gtag('event', 'Selecionar Números', { 'send_to': 'UA-149365568-1', 'event_category': 'clique', 'event_label': 'Selecionar Números' });">--}}
+{{--                {{$num->number}}--}}
+{{--            </div>--}}
+{{--            @endforeach--}}
+{{--            <br>--}}
+{{--            <button type="button" class="btn btn-success btn-block btn-select-number" id="showModal"--}}
+{{--            onclick="gtag('event', 'Escolher Números', { 'send_to': 'UA-149365568-1', 'event_category': 'clique', 'event_label': 'Escolher Números' });">Escolher números</button>--}}
+{{--            <br>--}}
         </section>
-    
+
 
     <!-- Modal -->
     <div class="modal fade" id="concluir-cadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -93,7 +98,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Finalizar Reserva</h5>
                 </div>
-                <form method="post" action="{{route('rifa.post')}}" onsubmit="addElements()" id="form-rifa"> 
+                <form method="post" action="{{route('rifa.post')}}" onsubmit="addElements()" id="form-rifa">
                     <div class="modal-body">
                         <div id="body-form">
                             <p>Números Selecionados:</p>
