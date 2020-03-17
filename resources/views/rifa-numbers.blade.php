@@ -75,9 +75,14 @@
         </section>
         <section class="rifa-number">
             <div class="alert alert-danger text-center" role="alert">
-                <h3>Desculpem-nos o transtorno!</h3>
+                <h3>Rifa cancelada (07/03/2020)</h3>
                 <br>
-                <h5>Estamos em manutenção</h5>
+                <h5>Caso você tenha alguma reserva PAGA, e não recebeu nosso contato, entre em contato conosco:</h5> <br>
+                <h5>
+                Telefone: (31) 99870-2664<br>
+                E-mail: ccolecionaveis@gmail.com
+                </h5>
+
             </div>
 {{--            @foreach($rifa->numbers as $num)--}}
 {{--            <div class="number @if($num->status == 1) reserved @elseif($num->status == 2) done @else number-disponivel @endif" id="{{$num->id}}" data_number="{{$num->number}}" style="display: inline-table;" onclick="gtag('event', 'Selecionar Números', { 'send_to': 'UA-149365568-1', 'event_category': 'clique', 'event_label': 'Selecionar Números' });">--}}
